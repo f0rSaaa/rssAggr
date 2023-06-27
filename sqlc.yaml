@@ -1,0 +1,15 @@
+# version: "1"
+# packages:
+#   - schema: "sql/schema/001_users.sql"
+#     queries: "sql/queries/users.sql"
+#     engine: "mysql"
+#     path: "internal/database"
+
+version: "2"
+sql:
+  - schema: "sql/schema"
+    queries: "sql/queries"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "internal/database"
